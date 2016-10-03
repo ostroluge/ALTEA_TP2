@@ -24,6 +24,9 @@
 			<forward name="listUsers" path="/jsp/affiche.jsp" />
 			<forward name="notAutorised" path="/jsp/login.jsp" />
 		</action>
+		<action path="/removeUser" name="removeUser" type="action.DeleteUserAction"
+			scope="request" input="/jsp/affiche.jsp">
+		</action>
 	</action-mappings>
 	<message-resources parameter="ApplicationResources" />
 </struts-config>

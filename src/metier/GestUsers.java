@@ -47,6 +47,15 @@ public class GestUsers {
 		return null;
 	}
 
+	public User getUserById(int id) {
+		for (User user : lesUtilisateurs.values()) {
+			if (user.getIdUser() == id) {
+				return user;
+			}
+		}
+		return null;
+	}
+	
 	public void addUser(String login, String pass, String email, String ville) {
 		User user = new User();
 		user.setIdUser(idUser++);

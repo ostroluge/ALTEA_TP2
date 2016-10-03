@@ -23,7 +23,7 @@
 				<td><bean:write name="user" property="pass" /></td>
 				<td><bean:write name="user" property="ville" /></td>
 				<td><bean:write name="user" property="email" /></td>
-				<td><a href="">Supprimer</a></td>
+				<td><html:link action="/removeUser" paramName="user" paramId="idUser" paramProperty="idUser">Supprimer</html:link></td>
 			</tr>
 		</logic:iterate>
 		<html:form action="addUser.do">
