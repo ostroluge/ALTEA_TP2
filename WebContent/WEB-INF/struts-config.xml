@@ -10,11 +10,18 @@
 <struts-config>
 	<form-beans>
 		<form-bean name="logFor" type="form.LoginForm" />
+		<form-bean name="usersForm" type="form.UserForm" />
 	</form-beans>
 	<action-mappings>
 		<action path="/login" name="logFor" type="action.LoginAction"
 			scope="request" input="/jsp/login.jsp" validate="true" >
 			<forward name="bienvenue" path="/jsp/bienvenue.jsp" />
+			<forward name="notAutorised" path="/jsp/login.jsp" />
+			<forward name="listUsers" path="/jsp/affiche.jsp" />
+		</action>
+		<action path="/addUser" name="usersForm" type="action.UsersAction"
+			scope="request" input="/jsp/affiche.jsp">
+			<forward name="listUsers" path="/jsp/affiche.jsp" />
 			<forward name="notAutorised" path="/jsp/login.jsp" />
 		</action>
 	</action-mappings>

@@ -57,6 +57,10 @@ public class GestUsers {
 		
 		lesUtilisateurs.put(user.getLogin() + "¤" + user.getPass(), user);
 	}
+
+	public void deleteUser(String login, String pass) {
+		lesUtilisateurs.remove(login + "¤" + pass);
+	}
 	
 	public List<User> selectAll() {
 		List<User> users = new ArrayList<>();
